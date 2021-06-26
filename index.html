@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+  <!-- IRÁ VIRAR UM ARQUIVO DE CABEÇALHO EM HTML -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,12 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/all.css">
   <link rel="stylesheet" href="assets/css/personalizado.css">
-
-  <title>Controle Financeiro</title>
+  <!-- FINAL DO CABEÇALHO -->
+  <title>Gestão Financeiro</title>
 </head>
 
 <body>
-  <header>
+  <header id="topo">
     <div class="img-wrapper">
       <img src="assets/img/background.jpg">
     </div>
@@ -24,11 +25,13 @@
       <h1>Gestão Financeira</h1>
       <h2>Crédito & Débito</h2>
       <p>Gustavo Santos & Nicolas Bicalho</p>
-      <button>Saiba mais</button>
+      <a type="button" href="#tecnologias">Saiba mais</a>
     </div>
   </header>
 
+
   <div class="caixa">
+    <!-- IRÁ VIRAR UM ARQUIVO JSP SEPARADO DE MENU -->
     <div class="hamburger">
       <div class="line" id="line1"></div>
       <div class="line" id="line2"></div>
@@ -37,6 +40,9 @@
     <aside class="sidebar">
       <nav>
         <ul class="menu">
+          <li class="menu-item">
+            <a href="" class="menu-link login"><i class="fas fa-sign-in-alt"></i> Login</i></a>
+          </li>
           <li class="menu-item">
             <a href="#" class="menu-link">Home</a>
           </li>
@@ -62,8 +68,10 @@
             class="fab fa-github"></i></a>
       </div>
     </aside>
+    <!-- FINAL DO MENU -->
 
-    <section class="sessao-tecnologias">
+    <!-- CONTEÚDO DO SITE -->
+    <section class="sessao-tecnologias" id="tecnologias">
       <div class="sessao-header">
         <h1>Tecnologias Utilizadas</h1>
       </div>
@@ -133,11 +141,30 @@
         </div>
       </div>
     </section>
-
-
+    <!-- FINAL DO CONTEÚDO -->
+    <!-- IRÁ VIRAR UM ARQUIVO JSP SEPARADO DE RODAPÉ -->
+    <footer>
+      <div class="footer-content">
+        <p>Copyright &copy; 2021, GS - Todos os direitos reservados</p>
+        <div class="social-list">
+          <a href="https://www.facebook.com/guzt.santos/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/gs-santos/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/gssantos94/gssantos" target="_blank"><i class="fab fa-github"></i></a>
+          <i class="fas fa-ellipsis-v"></i>
+          <a href="https://google.com.br" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://google.com.br" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://google.com.br" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </footer>
+    <a href="#topo" id="link-topo"><i class="fas fa-arrow-up"></i></a>
+    <!-- FINAL DO RODAPÉ -->
   </div>
+  <!-- IRÁ VIRAR UM ARQUIVO HTML SEPARADO DE SCRIPTS GERAIS -->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery.js"></script>
   <script src="assets/js/personalizado.js"></script>
+  <!-- FINAL DOS SCRIPTS -->
 </body>
 
 </html>

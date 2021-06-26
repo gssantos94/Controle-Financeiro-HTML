@@ -1,9 +1,5 @@
 @import url('fonts.css');
 
-* {
-  list-style: none;
-}
-
 /* Paleta de cores
 #bad7e7
 #f3f3f3
@@ -11,6 +7,14 @@
 #7e8192
 #e5e5e5
 */
+
+* {
+  list-style: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
 
 :root {
   --font-primary: 'Baloo Da 2', sans-serif;
@@ -23,7 +27,7 @@
   width: 2rem;
   height: 2rem;
   position: fixed;
-  z-index: 100;
+  z-index: 200;
   right: 2rem;
   top: 2rem;
   display: flex;
@@ -43,21 +47,26 @@
   background-color: whitesmoke;
   box-shadow: 0.1rem 0.1rem 5px rgba(0, 0, 0, 0.6);
   transition: all 1s;
+
 }
+
 .show-menu #line1{
   transform: rotate(45deg) translate(.33rem, .45rem);
   box-shadow: 0rem 0rem;
   background-color: #283144;
 }
+
 .show-menu #line2{
   opacity: 0;
   visibility: hidden;
 }
+
 .show-menu #line3{
   transform: rotate(-45deg) translate(.3rem, -.45rem);
   box-shadow: 0rem 0rem;
   background-color: #283144;
 }
+
 header {
   width: 100%;
   height: 100vh;
@@ -69,14 +78,14 @@ header {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: rgba(34, 34, 90, 0.8);
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.7;
+  opacity: .4;
   animation: zoom 25s;
 }
 
@@ -131,7 +140,7 @@ header {
   animation: move_banner 1s 0.7s forwards;
 }
 
-.banner button {
+.banner a {
   box-shadow: .05rem .05rem 5px rgba(0, 0, 0, .2);
   font-family: var(--font-action), sans-serif;
   color: whitesmoke;
@@ -148,7 +157,7 @@ header {
   animation: move_banner 1s 0.9s forwards;
 }
 
-.banner button:hover {
+.banner a:hover {
   box-shadow: .02rem .02rem 3px rgba(0, 0, 0, .2);
 }
 
@@ -171,6 +180,7 @@ header {
   top: 0;
   right: -20rem;
   transition: all 1s;
+  z-index: 150;
 }
 
 .show-menu .sidebar{
@@ -183,6 +193,7 @@ header {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+
 }
 
 .menu-item {
@@ -196,10 +207,22 @@ header {
   color: #283144;
   transition: all 0.6s;
 }
+
 .menu-link:hover {
   color: #bad7e7;
 }
 
+.menu-link.login{
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: var(--font-action);
+  color: #536ea8;
+}
+
+.login i{
+  font-size: 1.5rem;
+  color: #536ea8;
+}
 
 .social-media{
   position: absolute;
@@ -221,43 +244,50 @@ header {
   transition: color 1s;
   border-radius: 50%;
 }
+
 .social-media i:hover{
   color: #7989ad;
 }
 
 /* Sessão Saiba Mais */
-
 .tecnologias{
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(6, 5.60rem);
   row-gap: .8rem;
+  padding-bottom: 2rem;
 }
 
 .tecnologia:nth-child(1){
   grid-column: 4 / 7;
   grid-row: 1 / 3;
 }
+
 .tecnologia:nth-child(2){
   grid-column: 3 / 6;
   grid-row: 3 / 5;
 }
+
 .tecnologia:nth-child(3){
   grid-column: 4 / 7;
   grid-row: 5 / -1;
 }
+
 .tecnologia:nth-child(4){
   grid-column: 11 / 14;
   grid-row: 1 / 3;
 }
+
 .tecnologia:nth-child(5){
   grid-column: 12 / 15;
   grid-row: 3 / 5;
 }
+
 .tecnologia:nth-child(6){
   grid-column: 11 / 14;
   grid-row: 5 / -1;
 }
+
 .sessao-tecnologias{
   background-color: #f3f3f3;
 
@@ -275,6 +305,7 @@ font-size: 3rem;
 color: #283144;
 border-bottom: solid 3px #bad7e7;
 margin-bottom: 1.5rem;
+padding-top: 1rem;
 }
 
 .tecnologia-header{
@@ -296,7 +327,8 @@ margin-bottom: 1.5rem;
 
 .tecnologia-text{
   font-family: var(--font-roboto);
-  margin-top: .3rem;
+  font-size: 1rem;;
+  margin-top: 0.5rem;
 }
 
 .tecnologia-img-wrapper{
@@ -308,4 +340,47 @@ margin-bottom: 1.5rem;
 .tecnologia-img-wrapper img{
   object-fit: cover;
   width: 100%;
+}
+
+footer{
+  width: 100%;
+  height: 6rem;
+  background-color: #283144;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content p{
+  font-family: var(--font-secondary);
+  color: #f3f3f3;
+  font-size: 1.2rem;
+}
+
+.social-list i{
+  color: #f3f3f3;
+  font-size: 1.5rem;
+  padding-left: .5rem;
+}
+
+#link-topo{
+  background-color: #bad7e7b9;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  color: #0e416bc5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .3rem;
+  box-shadow: 0 0 .2rem 0.2rem #00000009;
 }

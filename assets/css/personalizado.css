@@ -250,44 +250,6 @@ header {
 }
 
 /* Sessão Saiba Mais */
-.tecnologias{
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(6, 5.60rem);
-  row-gap: .8rem;
-  padding-bottom: 2rem;
-}
-
-.tecnologia:nth-child(1){
-  grid-column: 4 / 7;
-  grid-row: 1 / 3;
-}
-
-.tecnologia:nth-child(2){
-  grid-column: 3 / 6;
-  grid-row: 3 / 5;
-}
-
-.tecnologia:nth-child(3){
-  grid-column: 4 / 7;
-  grid-row: 5 / -1;
-}
-
-.tecnologia:nth-child(4){
-  grid-column: 11 / 14;
-  grid-row: 1 / 3;
-}
-
-.tecnologia:nth-child(5){
-  grid-column: 12 / 15;
-  grid-row: 3 / 5;
-}
-
-.tecnologia:nth-child(6){
-  grid-column: 11 / 14;
-  grid-row: 5 / -1;
-}
-
 .sessao-tecnologias{
   background-color: #f3f3f3;
 
@@ -383,4 +345,40 @@ footer{
   align-items: center;
   border-radius: .3rem;
   box-shadow: 0 0 .2rem 0.2rem #00000009;
+}
+
+/* TELA DE LOGIN */
+.form-signin{
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  color: #283144;
+  width: 100%;
+  max-width: 230px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin i{
+  color: #7989ad;
+}
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin button{
+  box-shadow: .05rem .05rem 5px rgba(0, 0, 0, .2);
+  font-family: var(--font-action), sans-serif;
+  color: whitesmoke;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  background: #86A8E7;
+  background: -webkit-linear-gradient(to left, #bbd6e5, #86A8E7);
+  background: linear-gradient(to left, #bbd6e5, #86A8E7);
+  padding: .8rem;
+  border: none;
+  border-radius: 50px;
+}
+
+.form-floating{
+  color: #283144;
 }

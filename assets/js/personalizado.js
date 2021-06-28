@@ -37,3 +37,15 @@ $('a[href*="#"]')
       }
     }
   });
+
+//<![CDATA[
+$(window).on('load', function () {
+  if (document.querySelector("#preloader")) {
+    $('#preloader .inner').fadeOut();
+    $('#preloader').delay(550).fadeOut('slow');
+    $('body').delay(550).css({
+      'overflow': 'visible'
+    });
+  }
+})
+//]]>

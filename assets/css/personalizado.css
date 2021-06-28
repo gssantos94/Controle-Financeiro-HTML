@@ -10,10 +10,7 @@
 
 * {
   list-style: none;
-}
-
-html{
-  scroll-behavior: smooth;
+  font-family: var(--font-primary);
 }
 
 :root {
@@ -23,6 +20,71 @@ html{
   --font-roboto: 'Roboto', sans-serif;
 }
 
+ /* Preloader */
+ #preloader {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#283144; /* cor do background que vai ocupar o body */
+  z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+}
+
+#preloader .inner {
+  position: absolute;
+  top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+  left: 50%;
+  transform: translate(-50%, -50%);  
+}
+
+.bolas > div {
+display: inline-block;
+background-color: #bad7e7;
+width: 25px;
+height: 25px;
+border-radius: 100%;
+margin: 3px;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+animation-name: animarBola;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+ 
+}
+
+.bolas > div:nth-child(1) {
+  animation-duration:0.75s ;
+  animation-delay: 0;
+}
+.bolas > div:nth-child(2) {
+  animation-duration: 0.75s ;
+  animation-delay: 0.12s;
+}
+.bolas > div:nth-child(3) {
+  animation-duration: 0.75s  ;
+  animation-delay: 0.24s;
+}
+
+@keyframes animarBola {
+0% {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+10% {
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  opacity: 0.7;
+}
+80%,100% {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1; 
+} 
+}
+
+/* menu */
 .hamburger {
   width: 2rem;
   height: 2rem;
@@ -251,37 +313,37 @@ header {
 }
 
 /* Sessão Saiba Mais */
-.sessao-tecnologias{
+.tecnologias{
   background-color: #f3f3f3;
 
 }
 
-.sessao-header{
+.main-titulo{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.sessao-header h1{
+.main-titulo h1{
 font-family: var(--font-primary);
 font-size: 2rem;
 color: #283144;
-border-bottom: solid 1px #bad7e7;
+border-bottom: solid 2px #bad7e7;
 margin-bottom: 0.5rem;
 padding-top: 0.5rem;
 }
 
-.tecnologia-header{
+.tec-titulo{
   display: flex;
   align-items: center;
   color: #283144;
 }
 
-.tecnologia-header i{
+.tec-titulo i{
   font-size: 2rem;
 }
 
-.tecnologia-header h3{
+.tec-titulo h3{
   font-family: var(--font-secondary);
   font-size: 2rem;
   padding-left: 0.5rem;
@@ -302,6 +364,16 @@ padding-top: 0.5rem;
   align-items: center;
   border-radius: .3rem;
   box-shadow: 0 0 .2rem 0.2rem #00000009;
+}
+
+/* Rodapé*/
+footer{
+  padding-top: 1rem; background:#283144;
+}
+
+footer p{
+  padding-top: 0.9rem;
+  color: #7989ad;
 }
 
 /* TELA DE LOGIN */

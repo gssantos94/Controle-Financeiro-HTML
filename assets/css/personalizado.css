@@ -348,7 +348,7 @@ footer{
 }
 
 /* TELA DE LOGIN */
-.form-signin{
+.pag-login{
   font-family: var(--font-primary);
   font-size: 1.5rem;
   color: #283144;
@@ -358,14 +358,14 @@ footer{
   margin: auto;
 }
 
-.form-signin i{
+.pag-login i{
   color: #7989ad;
 }
-.form-signin .form-floating:focus-within {
+.pag-login .form-floating:focus-within {
   z-index: 2;
 }
 
-.form-signin button{
+.pag-login button{
   box-shadow: .05rem .05rem 5px rgba(0, 0, 0, .2);
   font-family: var(--font-action), sans-serif;
   color: whitesmoke;

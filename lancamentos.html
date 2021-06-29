@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- IRÁ VIRAR UM ARQUIVO DE CABEÇALHO EM HTML -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/img/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/img/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="manifest" href="assets/img/site.webmanifest">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/all.css">
+  <link rel="stylesheet" href="assets/css/personalizado.css">
+  <!-- FINAL DO CABEÇALHO -->
+  <title>Lançamentos</title>
+</head>
+
+<body>
+
+  <!-- início do preloader -->
+  <div id="preloader">
+    <div class="inner">
+      <div class="bolas">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <!-- fim do preloader -->
+
+  <div class="pag-temporarias">
+    <div class="hamburger">
+      <div class="line" id="line1"></div>
+      <div class="line" id="line2"></div>
+      <div class="line" id="line3"></div>
+    </div>
+    <aside class="sidebar">
+      <nav>
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="login.html" class="menu-link login"><i class="fas fa-sign-in-alt"></i> Login</i></a>
+          </li>
+          <li class="menu-item">
+            <a href="index.html" class="menu-link">Home</a>
+          </li>
+          <li class="menu-item">
+            <a href="administradores.html" class="menu-link">Administrador</a>
+          </li>
+          <li class="menu-item">
+            <a href="categorias.html" class="menu-link">Categoria</a>
+          </li>
+          <li class="menu-item">
+            <a href="contas" class="menu-link">Conta</a>
+          </li>
+          <li class="menu-item">
+            <a href="lancamentos.html" class="menu-link">Lançamento</a>
+          </li>
+          <li class="menu-item">
+            <a href="usuarios.html" class="menu-link">Usuário</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="social-media">
+        <a href="https://github.com/gssantos94/Controle-Financeiro-HTML.git" target="_blank"><i
+            class="fab fa-github"></i></a>
+      </div>
+    </aside>
+    <!-- FINAL DO MENU -->
+
+    <!-- CONTEÚDO DO SITE -->
+    <main>
+      <section class="container">
+        <h1 class="text-center p-4" id="topo">
+          Formulário de Lançamentos
+        </h1>
+        <div class="row">
+          <div class="col-md-2 text-center">
+            <form action="" class="form-temporario p-md-0">
+              <i class="fab fa-2x fa-creative-commons-share"></i>
+              <h1 class="h3 mb-1">Criar</h1>
+              <div class="form-temporario mb-2">
+                <input name="id_conta" type="text" class="form-control mb-2" placeholder="Id Conta" required>
+                <input name="id_categoria" type="text" class="form-control mb-2" placeholder="Id Categoria" required>
+                <input name="valor" type="text" class="form-control mb-2" placeholder="Valor" maxlength="13" required>
+                <input name="operacao" type="text" class="form-control mb-2" placeholder="Operação" maxlength="1" required>
+                <input name="data" type="datetime" class="form-control mb-2" placeholder="Data" required>
+                <input name="descricao" type="text" class="form-control mb-2" placeholder="Descrição" maxlength="100" required>
+              </div>
+              <button class="btn mb-2 btn-lg btn-primary" type="submit">Criar</button>
+            </form>
+          </div>
+          <div class="col-md-2 text-center"">
+            <form action="" class=" form-temporario p-4 p-md-0">
+            <i class="far fa-2x fa-edit"></i>
+            <h1 class="h3 mb-1">Editar</h1>
+            <div class="form-temporario mb-2">
+              <input name="id" type="text" class="form-control mb-2" placeholder="Id" readonly>
+              <input name="id_conta" type="text" class="form-control mb-2" placeholder="Id Conta" required>
+              <input name="id_categoria" type="text" class="form-control mb-2" placeholder="Id Categoria" required>
+              <input name="valor" type="text" class="form-control mb-2" placeholder="Valor" maxlength="13" required>
+              <input name="operacao" type="text" class="form-control mb-2" placeholder="Operação" maxlength="1" required>
+              <input name="data" type="datetime" class="form-control mb-2" placeholder="Data" required>
+              <input name="descricao" type="text" class="form-control mb-2" placeholder="Descrição" maxlength="100" required>
+            </div>
+            <button class="btn mb-2 btn-lg btn-primary" type="submit">Editar</button>
+            </form>
+          </div>
+          <div class="col-md-8">
+            <table class="table table-sm" id="tabela-contas">
+              <thead>
+                <tr >
+                  <th scope="col" style="width: 1% !important;">Id</th>
+                  <th scope="col" style="width: 1% !important;">Conta</th>
+                  <th scope="col" style="width: 1% !important;">Categoria</th>
+                  <th scope="col" style="width: 15% !important;">Valor</th>
+                  <th scope="col" style="width: 1% !important;">Op</th>
+                  <th scope="col" style="width: 15% !important;">Data</th>
+                  <th scope="col" style="width: 20% !important;">Descrição</th>
+                  <th scope="col" style="width: 20% !important;">Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>100,00</td>
+                  <td>D</td>
+                  <td>2021-06-28</td>
+                  <td>Mercado de noite</td>
+                  <td>
+                    <a class="btn" href="#""><i class=" far fa-edit"></i></a>
+                    <a class="btn" href="#"><i class="fas fa-trash-alt"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>999</td>
+                  <td>999</td>
+                  <td>999</td>
+                  <td>999,99</td>
+                  <td>C</td>
+                  <td>2021-06-28</td>
+                  <td>Mercado de noite</td>
+                  <td>
+                    <a class="btn" href="#""><i class=" far fa-edit"></i></a>
+                    <a class="btn" href="#"><i class="fas fa-trash-alt"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- IRÁ VIRAR UM ARQUIVO JSP SEPARADO DE RODAPÉ -->
+    <footer class="text-center">
+      <div class="container p-1">
+        <!-- Section: Social media -->
+        <section class="">
+          <!-- Facebook Gustavo -->
+          <a class="btn btn-outline-light btn-floating" href="https://www.facebook.com/guzt.santos/" role="button"
+            target="_blank"><i class="fab fa-facebook-f" style="color: #3b5998;"></i></a>
+
+          <!-- Linkedin Gustavo -->
+          <a class="btn btn-outline-light btn-floating" href="https://www.linkedin.com/in/gs-santos/" role="button"
+            target="_blank"><i class="fab fa-linkedin-in" style="color: #0e76a8;"></i></a>
+
+          <!-- Github Gustavo -->
+          <a class="btn btn-outline-light btn-floating" href="https://github.com/gssantos94/gssantos" role="button"
+            target="_blank"><i class="fab fa-github"></i></a>
+
+          <a>|</a><!-- ESPAÇADOR -->
+
+          <!-- Facebook Nicolas -->
+          <a class="btn btn-outline-light btn-floating" href="#" role="button"><i class="fab fa-facebook-f"
+              style="color: #3b5998;"></i></a>
+
+          <!-- Linkedin Nicolas -->
+          <a class="btn btn-outline-light btn-floating" href="#" role="button"><i class="fab fa-linkedin-in"
+              style="color: #0e76a8;"></i></a>
+
+          <!-- Github Nicolas -->
+          <a class="btn btn-outline-light btn-floating" href="#" role="button"><i class="fab fa-github"></i></a>
+          <p> 2021 &copy; Copyright - Todos os direitos reservados</p>
+        </section>
+      </div>
+    </footer>
+    <a href="#topo" id="link-topo"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <!-- IRÁ VIRAR UM ARQUIVO HTML SEPARADO DE SCRIPTS GERAIS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/personalizado.js"></script>
+</body>
+
+</html>

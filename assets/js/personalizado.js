@@ -1,5 +1,5 @@
 document.querySelector(".hamburger").addEventListener("click", () =>
-  document.querySelector(".pag-home, .pag-login").classList.toggle("show-menu")
+  document.querySelector(".pag-home, .pag-login, .pag-temporarias, .erro").classList.toggle("show-menu")
 );
 
 // Selecione todos os links com hashes
